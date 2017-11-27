@@ -17,15 +17,24 @@
 </head>
 <body>
 
-  <h1>Trivia Game</h1>
+  <h1>Totally Trivial Trivia!!</h1>
 
-  <h3>Text</h3>
+  <h3>Time Remaining: <span id="timeRemaining"></span></h3>
 
-  <h2>Number to Guess: <span id="number-to-guess"></span></h2>
+    <div class="timer">
+    <div class="timer__controls">
+      <button data-time="60" class="timer__button">Start</button>
+      <!-- <form name="customForm" id="custom"> -->
+        <!-- <input type="text" name="minutes" placeholder="Enter Minutes"> -->
+      <!-- </form> -->
+    </div>
+    <div class="display">
+      <h1 class="display__time-left"></h1>
+      <p class="display__end-time"></p>
+    </div>
 
-  <div id="">
-  
-  </div>	
+    <div id="triviaQuestions">
+    </div>	
 
 
   <script src="assets/javascript/app.js" type="text/javascript"> 
@@ -33,15 +42,13 @@
   </script>
 
 
-  <h4>
-    Your total score is: <span id="total-score"></span>
-  </h4>
-  <h4>
-    Wins: <span id="wins"></span>
-  </h4>
-  <h4>
-    Losses: <span id="losses"></span>
-  </h4>
+  <h4>Correct Answers: <span id="correct"></span></h4>
+  <h4>Incorrect Answers: <span id="incorrect"></span></h4>
+  <h4>Unanswered: <span id="unanswered"></span></h4>
 
 </body>
 </html>
+
+
+
+

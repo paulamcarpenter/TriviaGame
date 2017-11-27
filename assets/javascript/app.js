@@ -1,23 +1,66 @@
-$(document).ready(function() { //    Isnt this needed at top of all .js?
+// $(document).ready(function() { //    Isnt this needed at top of all .js?
 
-  var wins = 0;
-  var losses = 0;
-  var numberOptions = Array(4);
-  var counter = 0;  
-  var targetNumber = getRandomInt(19, 120);
-  for (var i = 0; i < numberOptions.length; i++) {
-    var imageCrystal = $("<img>");
-    // First each crystal will be given the class ".crystal-image".
-    // This will allow the CSS to take effect.
-    imageCrystal.addClass("crystal-image");
-    imageCrystal.attr('id', 'number-'+i);
-    // Each imageCrystal will be given a src link to the crystal image
-    imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+  // var timeRemaining = 0;
+  // var correct = 0;
+  // var incorrect = 0;
+  // var wins = 0;
+  // var losses = 0;
+  
+//  Interval Exercise (follow the instructions below).
 
-    // Each imageCrystal will be given a data attribute called data-crystalValue.
-    // This data attribute will be set equal to the array value.
-    // imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+//  This code will run as soon as the page loads.
+let countdown;
+const timerDisplay = document.querySelector('.display__time-left');
+const endTime = document.querySelector('.display__end-time');
+const buttons = document.querySelectorAll('[data-time]');
 
-    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-    $("#crystals").append(imageCrystal);
-  }
+function timer(seconds) {
+  // clear any existing timers
+  clearInterval(countdown);
+
+  const now = Date.now();
+  const then = now + seconds * 1000;
+  displayTimeLeft(seconds);
+  displayEndTime(then);
+
+  countdown = setInterval(() => {
+    const secondsLeft = Math.round((then - Date.now()) / 1000);
+    // check if we should stop it!
+    if(secondsLeft < 0) {
+      clearInterval(countdown);
+      return;
+    }
+    // display it
+    displayTimeLeft(secondsLeft);
+  }, 1000);
+}
+
+function displayTimeLeft(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainderSeconds = seconds % 60;
+  const display = `${minutes}:${remainderSeconds < 10 ? '0' : '' }${remainderSeconds}`;
+  document.title = display;
+  timerDisplay.textContent = display;
+}
+
+function displayEndTime(timestamp) {
+  const end = new Date(timestamp);
+  const hour = end.getHours();
+  const adjustedHour = hour > 12 ? hour - 12 : hour;
+  const minutes = end.getMinutes();
+  // endTime.textContent = `Be Back At ${adjustedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
+}
+
+function startTimer() {
+  const seconds = parseInt(this.dataset.time);
+  timer(seconds);
+}
+
+buttons.forEach(button => button.addEventListener('click', startTimer));
+document.customForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const mins = this.minutes.value;
+  console.log(mins);
+  timer(mins * 60);
+  this.reset();
+});
