@@ -70,7 +70,7 @@ function generateHTML() {
 }
 
 function wait() {
-  if (questionCounter < 7) {
+  if (questionCounter < 6) {
   questionCounter++;
   generateHTML();
   counter = 30;
@@ -115,7 +115,7 @@ var gameHTML;
 var counter = 30;
 var questionArray = ["How many legs does a lobster have?", "In which sport are barani, rudolph and randolph all techniques?", "Who was the first artist to enter the US album chart at No 1?", "The first person shooter video game Doom was first released in what year?", "The first McDonald's restaurant opened in which U.S. state?", "What is the largest freshwater lake in the world?", "What is the capital of Colombia?"];
 var answerArray = [["Two", "Five", "Ten", "None"], ["Herding","Trampolining","Hunting","Motorcross"], ["Paul McCartney", "David Bowie", "Elton John", "Adele"], ["2001","1989","1999","1993"], ["Ohio", "California", "Indiana", "Iowa"], ["Lake Placid","Lake Superior","Lake Victoria","Caspian Sea"], ["Medellin", "Bogota", "Cartagena", "Cali"]];
-var imageArray = ["lobster.png", "trampoline.png" ,"eltonjohn.png", "1993.png", "mcdonalds.png", "lakesuperior.png", "bogota.png","x.png"];
+var imageArray = ["<img class='center-block img-right' src='img/lobster.png'>", "<img class='center-block img-right' src='img/trampoline.png'>", "<img class='center-block img-right' src='img/eltonjohn.png'>", "<img class='center-block img-right' src='img/1993.png'>", "<img class='center-block img-right' src='img/mcdonalds.png'>", "<img class='center-block img-right' src='img/lakesuperior.png'>", "<img class='center-block img-right' src='img/bogota.png'>"];
 var correctAnswers = ["C. Ten", "B. Trampolining", "C. Elton John", "D. 1993", "B. California", "B. Lake Superior", "B. Bogota"];
 var questionCounter = 0;
 var selecterAnswer;
