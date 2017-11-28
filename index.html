@@ -1,88 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Trivia Game</title>
+  <html lang ="en">
+    <head>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-
-
-  </style>
-
-</head>
-<body>
-
-  <h1>Totally Trivial Trivia!!</h1>
-
-  
-
-    <div class="timer">
-    <div class="timer__controls">
-      <button data-time="60" class="timer__button">Start</button>
-      <!-- <form name="customForm" id="custom"> -->
-        <!-- <input type="text" name="minutes" placeholder="Enter Minutes"> -->
-      <!-- </form> -->
-    </div>
-
-    <h3>Time Remaining: <span id="timer__controls"></span></h3>
-
-    <div class="display">
-      <h1 class="display__time-left"></h1>
-      <p class="display__end-time"></p>
+        <meta charset="utf-8">
+        <title>Totally Trivial Trivia!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    </head>
+    <body>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-center">Totally Trivial Trivia!</h1>
+          <div class="mainArea col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container">
-      <h2>What is the largest State in square miles in the United States?</h2>
-      <form>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Texas
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Alaska
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Canada
-        </label>
-      <h2>What small City has the most millionaires in the United States?</h2>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Jacksonville, Wyoming
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Juneau, Alaska
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" value="">Miami, Florida
-        </label>
 
-      </form>
-    </div>
-
-
-
-
-
-
-    <div id="results">
-      <h4>Correct Answers: <span id="correct"></span></h4>
-      <h4>Incorrect Answers: <span id="incorrect"></span></h4>
-      <h4>Unanswered: <span id="unanswered"></span></h4>
-    </div>
-
-
-  <script src="assets/javascript/app.js" type="text/javascript"> 
-
-  </script>
-
-
-
-</body>
-</html>
-
-
-
-
+    </div> <!-- /container -->
+        <script src="assets/javascript/app.js"></script>
+    </body>
+  </html>
