@@ -1,9 +1,4 @@
 
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
 .jumbotron {
   box-sizing: border-box;
   height: 600px;
@@ -52,5 +47,6 @@
 
 body {
   background-color: orange;
+  background-image: url("background.jpg");
   color: white;
 }
