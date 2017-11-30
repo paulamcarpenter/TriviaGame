@@ -2,7 +2,10 @@
 .jumbotron {
   box-sizing: border-box;
   height: 600px;
-  background-color: rgba(0, 0, 0, 0);
+  /*background-color: rgba(0, 0, 0, 0);*/
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
 }
 
 .main-button-container {
@@ -47,5 +50,7 @@
 
 body {
   background-color: orange;
+  background-image: url("../../img/background.jpg");
   color: white;
 }
+
